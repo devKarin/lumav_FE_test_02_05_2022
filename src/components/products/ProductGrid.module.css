@@ -1,5 +1,11 @@
-.maingridwrapper {
-  color: violet;
-  border: 2px solid violet;
-  width: 90%;
+.mainproductlist {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+}
+
+.mainproductlist {
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-gap: 1.5rem;
 }

@@ -1,0 +1,25 @@
+.button {
+  padding: 0.5rem;
+  outline: auto;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: greenyellow;
+  color: darkgreen;
+}
+
+.remove {
+  background-color: pink;
+  color: red;
+}
+
+.mark {
+  background-color: white;
+  color: blue;
+}
+
+.usual {
+  background-color: lightblue;
+  color: blue;
+}

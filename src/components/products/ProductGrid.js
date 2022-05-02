@@ -1,13 +1,24 @@
-import classes from './ProductGrid.module.css';
 import ProductItem from './ProductItem';
+import Card from '../ui/Card';
 
-export default function ProductGrid() {
+import classes from './ProductGrid.module.css';
+
+export default function ProductGrid(props) {
 
     return (
-        <div className={classes.maingridwrapper}>
-            This is my productgrid
+        <ul className={classes.mainproductlist}>
+            {props.productdata.map((product) =>
+                <ProductItem
+                    key={product.id}
+                    id={product.id}
+                    imageurl={product.image}
+                    name={product.name}
+                    price={product.price}
+                    countoncart={product.countoncart}
+                    status={product.status}
+                />
+            )}
             <ProductItem />
-            <ProductItem />
-        </div>
+        </ul>
     );
 }

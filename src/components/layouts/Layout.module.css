@@ -1,7 +1,34 @@
-main {
+.mainlayout {
   background-color: #282c34;
-  min-width: 100vw;
   font-size: calc(10px + 2vmin);
   color: yellow;
   border: 2px solid yellow;
+}
+
+/*
+-------------------------------------------------------------------------------
+Grid
+-------------------------------------------------------------------------------
+*/
+
+.mainlayout {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". productformarea productformarea productcounterarea"
+    "productgridarea productgridarea productgridarea productgridarea";
+}
+
+.productformarea {
+  grid-area: productformarea;
+}
+
+.productcounterarea {
+  grid-area: productcounterarea;
+  background-color: antiquewhite;
+}
+
+.productgridarea {
+  grid-area: productgridarea;
 }

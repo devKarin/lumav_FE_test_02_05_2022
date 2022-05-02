@@ -1,5 +1,18 @@
+.app {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "header"
+    "layout";
+}
 .mainheader {
   text-align: center;
   color: blue;
   border: 2px solid blue;
+  grid-area: header;
+}
+
+.layout {
+  grid-area: layout;
 }

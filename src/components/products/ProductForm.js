@@ -1,3 +1,5 @@
+import Card from '../ui/Card';
+
 import classes from './ProductForm.module.css';
 
 export default function ProductForm() {
@@ -10,7 +12,9 @@ export default function ProductForm() {
 
     return (
         <div className={classes.mainformwrapper}>
-            This is my productform
+            <Card>
+                This is my productform
+            </Card>
         </div>
     )
 }
