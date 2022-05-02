@@ -1,0 +1,7 @@
+main {
+  background-color: #282c34;
+  min-width: 100vw;
+  font-size: calc(10px + 2vmin);
+  color: yellow;
+  border: 2px solid yellow;
+}
