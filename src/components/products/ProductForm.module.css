@@ -1,5 +1,25 @@
 .mainformwrapper {
-  border: 2px solid pink;
-  color: pink;
+  color: rgb(189, 87, 102);
   display: grid;
+  justify-content: center;
+}
+
+.mainformwrapper {
+}
+
+.addproductform {
+}
+
+.formcontentwrapper {
+  margin-bottom: 1.5rem;
+}
+
+.formcontentwrapper label {
+  font-size: 1rem;
+  display: block;
+  margin-top: 1rem;
+}
+
+.formcontentwrapper input {
+  border-radius: 5px;
 }

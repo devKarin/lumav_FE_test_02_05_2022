@@ -1,4 +1,27 @@
-.productitemwrapper {
-  color: palegreen;
-  border: 2px solid palegreen;
+.productcontentwrapper {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    ". . closeButton"
+    ". productItemContent ."
+    ". addToCartButton .";
+}
+
+.productItemContent {
+  grid-area: productItemContent;
+  font-size: 1rem;
+}
+
+.productItemContent img {
+  max-width: 150px;
+}
+
+.closeButton {
+  grid-area: closeButton;
+}
+
+.addToCartButton {
+  grid-area: addToCartButton;
+  text-align: center;
 }

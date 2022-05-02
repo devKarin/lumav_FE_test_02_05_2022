@@ -14,15 +14,22 @@ export default function ProductItem(props) {
     }
 
     return (
-        <div className={classes.productitemwrapper}>
-            <Card>
-                <Button buttonStyle='remove' text='X' onClick={removeFromGridHandler} />
-                <p>Image <span>X-Button to remove item from grid</span></p>
-                <p>Product name: {props.name}</p>
-                <p>Product price: {props.price}</p>
-                <p>button to add to cart</p>
-                <Button buttonStyle='mark' text='Add to cart' onClick={addToCartHandler} />
-            </Card>
-        </div>
+        <Card>
+            <div className={classes.productcontentwrapper}>
+                <div className={classes.closeButton}>
+                    <Button buttonStyle='remove' text='X' onClick={removeFromGridHandler} />
+                </div>
+                <div className={classes.productItemContent}>
+                    <img src={props.imageurl} alt={`Product: ${props.name}`} />
+                    <p className={classes.labeltext}>Product name: </p>
+                    <p className={classes.productInfo}>{props.name}</p>
+                    <p className={classes.labeltext}>Product price: </p>
+                    <p className={classes.productInfo}>{props.price}</p>
+                </div>
+                <div className={classes.addToCartButton}>
+                    <Button buttonStyle='mark' text='Add to cart' onClick={addToCartHandler} />
+                </div>
+            </div>
+        </Card>
     );
 }

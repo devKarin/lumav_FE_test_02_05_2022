@@ -7,9 +7,9 @@ export default function ProductGrid(props) {
 
     return (
         <ul className={classes.mainproductlist}>
-            {props.productdata.map((product) =>
+            {props.productdata.map((product, key) =>
                 <ProductItem
-                    key={product.id}
+                    key={key}
                     id={product.id}
                     imageurl={product.image}
                     name={product.name}

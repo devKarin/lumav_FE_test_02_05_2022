@@ -8,7 +8,7 @@ import classes from './Layout.module.css';
 export default function Layout() {
 
     return (
-        <main className={classes.mainlayout}>This is my main layout
+        <main className={classes.mainlayout}>
             <div className={classes.productformarea}>
                 <ProductForm />
             </div>

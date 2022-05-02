@@ -1,8 +1,5 @@
 .mainlayout {
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
-  color: yellow;
-  border: 2px solid yellow;
+  background-color: #56a08a;
 }
 
 /*
@@ -26,7 +23,6 @@ Grid
 
 .productcounterarea {
   grid-area: productcounterarea;
-  background-color: antiquewhite;
 }
 
 .productgridarea {

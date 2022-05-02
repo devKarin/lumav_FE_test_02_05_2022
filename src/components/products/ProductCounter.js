@@ -6,7 +6,7 @@ export default function ProductCounter() {
 
     return (
         <Card>
-            <p className={classes.counter}>This is my counter</p>
+            <p className={classes.counter}>Products in cart: </p>
         </Card>
     );
 }

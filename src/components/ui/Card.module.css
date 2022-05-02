@@ -1,6 +1,6 @@
 .card {
-  padding: 1.5rem;
-  background-color: cornflowerblue;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px midnightblue;
+  padding: 1rem;
+  background-color: rgba(233, 241, 183, 0.767);
+  border-radius: 15px;
+  box-shadow: 15px 15px 10px midnightblue;
 }
