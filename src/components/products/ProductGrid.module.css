@@ -5,7 +5,19 @@
   justify-content: center;
 }
 
-.mainproductlist {
+ul.mainproductlist {
   grid-template-columns: 20vw 20vw 20vw 20vw;
   grid-gap: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.emptyList {
+  margin-top: 2.5rem;
+  grid-template-columns: 80vw;
+  text-align: center;
 }

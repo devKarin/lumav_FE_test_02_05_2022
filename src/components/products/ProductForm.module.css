@@ -8,10 +8,12 @@
 }
 
 .addproductform {
+  text-align: center;
 }
 
 .formcontentwrapper {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .formcontentwrapper label {
