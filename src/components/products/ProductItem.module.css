@@ -17,6 +17,11 @@
   max-width: 150px;
 }
 
+.productInfo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .closeButton {
   grid-area: closeButton;
 }
@@ -24,4 +29,8 @@
 .addToCartButton {
   grid-area: addToCartButton;
   text-align: center;
+}
+
+.addToCartButton button {
+  margin-bottom: 1rem;
 }
