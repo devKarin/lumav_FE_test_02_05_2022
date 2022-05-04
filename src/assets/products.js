@@ -1,58 +1,51 @@
 export const products = [
     {
-        id: "1",
-        imageurl: "none",
-        name: "product 1",
-        price: "2 €",
+        id: "0",
+        imageurl: "https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg",
+        name: "Rat disposing device",
+        price: "2",
         countoncart: "0",
-        status: "visible"
+    },
+    {
+        id: "1",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSibQaFbCc3_TDB27_ZvgkqBlLfmWjFpMobfw&usqp=CAU",
+        name: "Running troublemaker",
+        price: "3",
+        countoncart: "0",
     },
     {
         id: "2",
-        imageurl: "none",
-        name: "product 2",
-        price: "3 €",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVxJe8qWFXZQjPuJnd1CUFckLx9HPAKUl62g&usqp=CAU",
+        name: "Perpetum chaoticum",
+        price: "1",
         countoncart: "0",
-        status: "visible"
     },
     {
         id: "3",
-        imageurl: "none",
-        name: "product 3",
-        price: "1 €",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYkfC6Uo0ZbGQfNALqSONy_jqwucE-pH0EQ&usqp=CAU",
+        name: "Super effective marriage wrecker",
+        price: "20",
         countoncart: "0",
-        status: "visible"
     },
     {
         id: "4",
-        imageurl: "none",
-        name: "product 4",
-        price: "20 €",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXpsm4RSo0WUNpbs_GPjBlwiv3QYb6OYnfA&usqp=CAU",
+        name: "Long lasting flea dispenser",
+        price: "8000",
         countoncart: "0",
-        status: "visible"
     },
     {
         id: "5",
-        imageurl: "none",
-        name: "product 5",
-        price: "8000 €",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCC4squwzXz2nJjoLg54HZI__bsl39JUc6NQ&usqp=CAU",
+        name: "Leather feet warmer",
+        price: "40",
         countoncart: "0",
-        status: "visible"
     },
     {
         id: "6",
-        imageurl: "none",
-        name: "product 6",
-        price: "40 €",
+        imageurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyMWR_WewjaiJAq6mTayQ904E83QtQkI65A&usqp=CAU",
+        name: "Domestic mememaker",
+        price: "150",
         countoncart: "0",
-        status: "visible"
     },
-    {
-        id: "7",
-        imageurl: "none",
-        name: "product 7",
-        price: "150 €",
-        countoncart: "0",
-        status: "visible"
-    }
 ];
