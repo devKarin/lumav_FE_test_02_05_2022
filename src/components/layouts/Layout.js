@@ -1,22 +1,32 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import ShoppingCart from '../../store/shoppingcart';
 import ProductForm from '../products/ProductForm';
 import ProductCounter from '../products/ProductCounter';
 import ProductGrid from '../products/ProductGrid';
+import Button from '../ui/Button';
+
 // Dummy list for products
-// import { products } from '../../assets/products';
+import { products } from '../../assets/products';
 
 import classes from './Layout.module.css';
 
 export default function Layout() {
     const cartCTX = useContext(ShoppingCart);
+    let productList = cartCTX.itemsOnProductList;
 
-    // In order to use dummydata, uncomment following
-    const productList = cartCTX.itemsOnProductList/*.concat(products)*/;
+    function loadDummiesHandler() {
+        products.forEach(product => {
+            product.id = Math.floor(Math.random() * 101);
+            cartCTX.addToProductsList(product)
+        });
+    }
 
     return (
         <main className={classes.mainlayout}>
+            <div className={classes.dummyproductsLoader}>
+                <Button text="I'm too lazy, please load dummies for me" onClick={loadDummiesHandler} />
+            </div>
             <div className={classes.productformarea}>
                 <ProductForm />
             </div>
