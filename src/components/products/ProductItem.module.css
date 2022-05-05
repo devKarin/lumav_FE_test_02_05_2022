@@ -1,3 +1,33 @@
+.productItemContent img {
+  max-width: 250px;
+  border-radius: 15px;
+}
+
+.labeltext,
+.productInfo {
+  font-size: var(--baseFontSizeH3);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.productInfo {
+  font-weight: bold;
+}
+
+.addToCartButton button {
+  margin-bottom: 1rem;
+}
+
+.addToCartButton {
+  text-align: center;
+}
+
+/*
+-------------------------------------------------------------------------------
+Grid
+-------------------------------------------------------------------------------
+*/
+
 .productcontentwrapper {
   display: grid;
   grid-template-columns: 10% 80% 10%;
@@ -10,16 +40,6 @@
 
 .productItemContent {
   grid-area: productItemContent;
-  font-size: 1rem;
-}
-
-.productItemContent img {
-  max-width: 150px;
-}
-
-.productInfo {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 .closeButton {
@@ -28,9 +48,4 @@
 
 .addToCartButton {
   grid-area: addToCartButton;
-  text-align: center;
-}
-
-.addToCartButton button {
-  margin-bottom: 1rem;
 }

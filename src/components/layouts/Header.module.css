@@ -3,7 +3,7 @@
   text-align: center;
   align-items: center;
   padding-top: 1.8rem;
-  background-color: rgb(27, 54, 77);
+  background-color: var(--mainDarkBlue);
   position: fixed;
   width: 100%;
   display: grid;
@@ -16,7 +16,7 @@
 h1,
 .github,
 .home {
-  color: rgb(176, 234, 248);
+  color: var(--mainLightBlue);
 }
 
 h1 {

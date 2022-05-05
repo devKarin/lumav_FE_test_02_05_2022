@@ -11,6 +11,7 @@
 .itemlist {
   color: var(--mainRed);
   font-size: calc(var(--baseFontSizep) * 1.5);
+
   /* Disable user-agent stylesheet settings */
   margin-block-start: 0;
   margin-block-end: 0;
