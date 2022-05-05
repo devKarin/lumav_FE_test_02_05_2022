@@ -15,8 +15,8 @@ export default function ProductItem(props) {
         cartCTX.removeFromProductList(props.id);
     }
 
-    function addInCartHandler() {
-        cartCTX.addInCart({
+    function addToCartHandler() {
+        cartCTX.addToCart({
             key: props.id,
             id: props.id,
             imageurl: props.imageurl,
@@ -44,8 +44,8 @@ export default function ProductItem(props) {
                     <p className={classes.productInfo}>{props.price} space$</p>
                 </div>
                 <div className={classes.addToCartButton}>
-                    {itemIsAdded ? <div><Button buttonStyle='mark' text='Add one more' onClick={addInCartHandler} /> <Button buttonStyle='remove' text='Remove one' onClick={removeFromCartHandler} />
-                    </div> : <Button buttonStyle='mark' text='Add to cart' onClick={addInCartHandler} />}
+                    {itemIsAdded ? <div><Button buttonStyle='mark' text='Add one more' onClick={addToCartHandler} /> <Button buttonStyle='remove' text='Remove one' onClick={removeFromCartHandler} />
+                    </div> : <Button buttonStyle='mark' text='Add to cart' onClick={addToCartHandler} />}
                 </div>
             </div>
         </Card>

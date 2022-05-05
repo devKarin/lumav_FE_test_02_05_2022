@@ -4,13 +4,14 @@ const ShoppingCart = createContext({
     // Set the initial context values
     itemsOnProductList: [],
     totalItemsOnProductList: 0,
-    addOnProductsList: (_productToAdd) => {/* Just a comment */ },
+    addToProductList: (_productToAdd) => {/* Just a comment */ },
     removeFromProductList: (_productId) => { /* Just a comment */ },
     productIsOnList: (_productId) => { /* Just a comment */ },
     itemsInCart: [],
     uniqueItemsInCart: [],
     totalItemsInCart: 0,
-    addInCart: (_itemToAdd) => { /* Just a comment */ },
+    addToCart: (_itemToAdd) => { /* Just a comment */ },
+    addUniqueItemsToCart: (_itemToAdd) => { /* Just a comment */ },
     removeFromCart: (_itemId) => { /* Just a comment */ },
     removeOneFromCart: (_itemId) => { /* Just a comment */ },
     itemIsInCart: (_itemId) => { /* Just a comment */ },
@@ -23,7 +24,7 @@ export function ShoppingCartProvider(props) {
     const [list, setList] = useState([]);
 
     // Add products in the grid
-    function addOnProductsListHandler(productToAdd) {
+    function addToProductListHandler(productToAdd) {
         setList((prevList) => {
 
             return prevList.concat(productToAdd);
@@ -45,7 +46,7 @@ export function ShoppingCartProvider(props) {
     }
 
     // Add product into shoppingcart
-    function addInCartHandler(itemToAdd) {
+    function addToCartHandler(itemToAdd) {
         itemToAdd.countincart = parseInt(itemToAdd.countincart) + 1;
         setCart((prevOnCart) => {
             prevOnCart.forEach((item) => {
@@ -61,10 +62,10 @@ export function ShoppingCartProvider(props) {
 
             return prevOnCart.concat(itemToAdd);
         });
-        addUniqueItemsInCartHandler(itemToAdd);
+        addUniqueItemsToCartHandler(itemToAdd);
     }
 
-    function addUniqueItemsInCartHandler(itemToAdd) {
+    function addUniqueItemsToCartHandler(itemToAdd) {
         setUniqueCart((prevCart) => {
             const indexOfDuplicate = prevCart.findIndex(item => item.id === itemToAdd.id);
             if (indexOfDuplicate === -1) {
@@ -113,14 +114,14 @@ export function ShoppingCartProvider(props) {
     const context = {
         itemsOnProductList: list,
         totalItemsOnProductList: list.length,
-        addOnProductsList: addOnProductsListHandler,
+        addToProductList: addToProductListHandler,
         removeFromProductList: removeFromProductListHandler,
         productIsOnList: productIsOnListHandler,
         itemsInCart: cart,
         uniqueItemsInCart: uniqueCart,
         totalItemsInCart: cart.length,
-        addInCart: addInCartHandler,
-        addUniqueItemsInCart: addUniqueItemsInCartHandler,
+        addToCart: addToCartHandler,
+        addUniqueItemsToCart: addUniqueItemsToCartHandler,
         removeFromCart: removeFromCartHandler,
         removeOneFromCart: removeOneFromCartHandler,
         itemIsInCart: itemIsInCartHandler,
