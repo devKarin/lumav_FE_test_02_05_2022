@@ -6,16 +6,19 @@ export default function Header() {
 
     return (
         <div className={classes.headercontent}>
-            <a href="https://github.com/devKarin" target="new" className={classes.link}>
-                <i className={classes.icon}>
-                    <FaGithub />
-                </i>
-            </a>
-            <a href="https://devkarinportfolio.herokuapp.com/" target="new" className={classes.link}>
-                <i className={classes.icon}>
-                    <FaHome />
-                </i>
-            </a>
+            <h1>AlienShop</h1>
+            <div className={classes.icon}>
+                <a href="https://github.com/devKarin" target="new" className={classes.link}>
+                    <i className={classes.github}>
+                        <FaGithub />
+                    </i>
+                </a>
+                <a href="https://devkarinportfolio.herokuapp.com/" target="new" className={classes.link}>
+                    <i className={classes.home}>
+                        <FaHome />
+                    </i>
+                </a>
+            </div>
         </div>
     );
 }
