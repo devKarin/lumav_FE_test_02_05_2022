@@ -1,4 +1,4 @@
-import { useRef, useContext, useId } from 'react';
+import { useRef, useContext } from 'react';
 
 import ShoppingCart from '../../store/shoppingcart';
 import Card from '../ui/Card';
@@ -11,7 +11,6 @@ export default function ProductForm() {
     const inputProductImageUrl = useRef();
     const inputProductName = useRef();
     const inputProductPrice = useRef();
-    const newId = useId();
 
     async function submitHandler(event) {
         event.preventDefault();
@@ -19,7 +18,7 @@ export default function ProductForm() {
         const newProductName = inputProductName.current.value;
         const newProductPrice = inputProductPrice.current.value;
         const product = {
-            id: Math.floor(Math.random() * 301), // newId,
+            id: Math.floor(Math.random() * 500001) + Date.now(),
             imageurl: newProductImageUrl,
             name: newProductName,
             price: newProductPrice,
@@ -28,6 +27,7 @@ export default function ProductForm() {
 
         cartCTX.addOnProductsList(product);
 
+        // Empty input fields
         inputProductImageUrl.current.value = '';
         inputProductName.current.value = ''
         inputProductPrice.current.value = '';
