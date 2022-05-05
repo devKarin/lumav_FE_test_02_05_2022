@@ -8,29 +8,26 @@ import classes from './ProductItem.module.css';
 
 export default function ProductItem(props) {
     const cartCTX = useContext(ShoppingCart);
-    const itemIsAdded = cartCTX.itemIsOnCart(props.id);
+    const itemIsAdded = cartCTX.itemIsInCart(props.id);
 
     function removeFromGridHandler() {
         cartCTX.removeFromCart(props.id);
         cartCTX.removeFromProductList(props.id);
     }
 
-    function addToCartHandler() {
-        cartCTX.addToCart({
+    function addInCartHandler() {
+        cartCTX.addInCart({
             key: props.id,
             id: props.id,
             imageurl: props.imageurl,
             name: props.name,
             price: props.price,
-            countoncart: props.countoncart
+            countincart: props.countincart
         });
-
-        console.log(cartCTX.itemsOnCart);
     }
 
     function removeFromCartHandler() {
         cartCTX.removeOneFromCart(props.id);
-        console.log(cartCTX.itemsOnCart);
     }
 
     return (
@@ -41,14 +38,14 @@ export default function ProductItem(props) {
                 </div>
                 <div className={classes.productItemContent}>
                     <img src={props.imageurl} alt={`Product: ${props.name}`} />
-                    <p className={classes.labeltext}>Product name: </p>
+                    <p className={classes.labeltext}>Product: </p>
                     <p className={classes.productInfo}>{props.name}</p>
-                    <p className={classes.labeltext}>Product price: </p>
-                    <p className={classes.productInfo}>{props.price} €</p>
+                    <p className={classes.labeltext}>Price: </p>
+                    <p className={classes.productInfo}>{props.price} space$</p>
                 </div>
                 <div className={classes.addToCartButton}>
-                    {itemIsAdded ? <div><Button buttonStyle='mark' text='Add one more' onClick={addToCartHandler} /> <Button buttonStyle='remove' text='Remove one' onClick={removeFromCartHandler} />
-                    </div> : <Button buttonStyle='mark' text='Add to cart' onClick={addToCartHandler} />}
+                    {itemIsAdded ? <div><Button buttonStyle='mark' text='Add one more' onClick={addInCartHandler} /> <Button buttonStyle='remove' text='Remove one' onClick={removeFromCartHandler} />
+                    </div> : <Button buttonStyle='mark' text='Add to cart' onClick={addInCartHandler} />}
                 </div>
             </div>
         </Card>

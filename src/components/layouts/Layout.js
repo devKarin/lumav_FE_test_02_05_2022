@@ -17,8 +17,8 @@ export default function Layout() {
 
     function loadDummiesHandler() {
         products.forEach(product => {
-            product.id = Math.floor(Math.random() * 101);
-            cartCTX.addToProductsList(product)
+            product.id = Math.floor(Math.random() * 301);
+            cartCTX.addOnProductsList(product)
         });
     }
 

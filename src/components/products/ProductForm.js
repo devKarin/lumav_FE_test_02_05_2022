@@ -19,15 +19,14 @@ export default function ProductForm() {
         const newProductName = inputProductName.current.value;
         const newProductPrice = inputProductPrice.current.value;
         const product = {
-            id: newId, // Math.floor(Math.random() * 101),
+            id: Math.floor(Math.random() * 301), // newId,
             imageurl: newProductImageUrl,
             name: newProductName,
             price: newProductPrice,
-            countoncart: 0
+            countincart: 0
         };
-        console.log(product);
 
-        cartCTX.addToProductsList(product);
+        cartCTX.addOnProductsList(product);
 
         inputProductImageUrl.current.value = '';
         inputProductName.current.value = ''

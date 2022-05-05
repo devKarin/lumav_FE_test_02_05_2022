@@ -5,7 +5,7 @@ import classes from './ProductGrid.module.css';
 
 export default function ProductGrid(props) {
 
-    return (<div>
+    return (<div className={classes.mainproductlist}>
         {props.productList.length > 0 ? <ul className={classes.mainproductlist}>
             {props.productList.map((product) =>
                 <ProductItem
@@ -14,7 +14,7 @@ export default function ProductGrid(props) {
                     imageurl={product.imageurl}
                     name={product.name}
                     price={product.price}
-                    countoncart={product.countoncart}
+                    countincart={product.countincart}
                 />
             )} </ul> : <div className={classes.emptyList}><Card>No products on the list yet</Card></div>}
 
