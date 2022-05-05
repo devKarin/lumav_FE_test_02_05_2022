@@ -1,5 +1,6 @@
-.mainlayout {
-  background-color: #56a08a;
+main {
+  justify-items: center;
+  display: grid;
 }
 
 /*
@@ -8,13 +9,8 @@ Grid
 -------------------------------------------------------------------------------
 */
 
-.mainlayout {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    ". productformarea productformarea productcounterarea"
-    "productgridarea productgridarea productgridarea productgridarea";
+.dummyproductsLoader {
+  grid-area: dummyproductsLoader;
 }
 
 .productformarea {
@@ -27,4 +23,69 @@ Grid
 
 .productgridarea {
   grid-area: productgridarea;
+}
+
+/*
+-------------------------------------------------------------------------------
+Responsiveness
+-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 340px) {
+  main {
+    padding: 7rem 3rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 340px) {
+  main {
+    padding: 9.3rem 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "productformarea"
+      "dummyproductsLoader"
+      "productcounterarea"
+      "productgridarea ";
+  }
+
+  .dummyproductsLoader,
+  .productcounterarea {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "productformarea productcounterarea"
+      "dummyproductsLoader productcounterarea"
+      "productgridarea productgridarea";
+  }
+
+  .productcounterarea {
+    padding-right: 30px;
+  }
+
+  .dummyproductsLoader {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 9.3rem 2rem 2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "dummyproductsLoader productformarea productformarea productcounterarea"
+      "productgridarea productgridarea productgridarea productgridarea";
+  }
 }
