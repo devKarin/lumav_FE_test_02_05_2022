@@ -16,8 +16,9 @@ export default function ProductGrid(props) {
                     price={product.price}
                     countincart={product.countincart}
                 />
-            )} </ul> : <div className={classes.emptyList}><Card>No products on the list yet</Card></div>}
-
+            )} </ul> : <div className={classes.emptyList}>
+            <Card>No products on the list yet</Card>
+        </div>}
     </div>
     );
 }

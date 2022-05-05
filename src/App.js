@@ -7,9 +7,6 @@ import Header from './components/layouts/Header';
 
 function App() {
 
-
-
-
   return (
     <div className='app'>
       <Canvas />
