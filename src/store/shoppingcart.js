@@ -45,32 +45,39 @@ export function ShoppingCartProvider(props) {
         return list.some(item => item.id === productId);
     }
 
-    // Add product into shoppingcart
+    // Add product to shoppingcart
     function addToCartHandler(itemToAdd) {
         itemToAdd.countincart = parseInt(itemToAdd.countincart) + 1;
-        setCart((prevOnCart) => {
-            prevOnCart.forEach((item) => {
+        setCart((prevInCart) => {
+            prevInCart.forEach((item) => {
+
                 if (item.id === itemToAdd.id) {
                     item.countincart = parseInt(item.countincart) + 1;
                 }
             });
 
-            return prevOnCart;
+            return prevInCart;
         });
 
         setCart((prevOnCart) => {
 
             return prevOnCart.concat(itemToAdd);
         });
+
         addUniqueItemsToCartHandler(itemToAdd);
     }
 
+    // For tracking unique products in shoppingcart
     function addUniqueItemsToCartHandler(itemToAdd) {
         setUniqueCart((prevCart) => {
             const indexOfDuplicate = prevCart.findIndex(item => item.id === itemToAdd.id);
+
             if (indexOfDuplicate === -1) {
+
                 return prevCart.concat(itemToAdd);
+
             } else {
+
                 return prevCart;
             }
         });
@@ -78,28 +85,66 @@ export function ShoppingCartProvider(props) {
 
     // Remove product from shoppingcart (including duplicates)
     function removeFromCartHandler(itemId) {
+
         const coreFunction = (prevCart) => {
 
             return prevCart.filter(item => item.id !== itemId)
         }
+
         setCart(coreFunction);
         setUniqueCart(coreFunction);
     }
 
     // Remove only one instace of the product from shoppingcart (excluding duplicates) i.e reduce product amount
     function removeOneFromCartHandler(itemId) {
-        const coreFunction = (prevCart) => {
+
+        setCart((prevCart) => {
+            prevCart.find((item) => {
+
+                if (item.id === itemId) {
+                    const parsedcount = parseInt(item.countincart)
+                    item.countincart = parsedcount - 1;
+                }
+
+                return prevCart;
+            });
+
             const indexOfDuplicate = prevCart.findIndex(item => item.id === itemId);
 
             if (indexOfDuplicate > -1) {
+
                 return prevCart.filter(item => prevCart.indexOf(item) !== indexOfDuplicate);
+
             } else {
+
                 return prevCart;
             }
-        }
+        });
 
-        setCart(coreFunction);
-        setUniqueCart(coreFunction);
+        removeOneFromUniqueCartHandler(itemId);
+
+    }
+
+    // Reduce product amount in the list of unique products in the shoppingcart
+    function removeOneFromUniqueCartHandler(itemId) {
+
+        setUniqueCart((prevCart) => {
+            const itemToReduce = prevCart.find(item => item.id === itemId);
+
+            if (itemToReduce && (parseInt(itemToReduce.countincart) > 1)) {
+                itemToReduce.countincart = parseInt(itemToReduce.countincart) - 1;
+
+                return prevCart;
+
+            } else if (itemToReduce && (parseInt(itemToReduce.countincart) === 1)) {
+
+                return prevCart.filter(item => item.id !== itemId);
+
+            } else {
+
+                return prevCart;
+            }
+        });
     }
 
     // Check whether the product is in the shoppingcart
@@ -107,8 +152,6 @@ export function ShoppingCartProvider(props) {
 
         return cart.some(item => item.id === itemId);
     }
-
-
 
     // New context values
     const context = {
