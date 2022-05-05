@@ -1,10 +1,16 @@
 :root {
   --baseFontSizep: 1.2rem;
-  --baseFontSizeH1: 2.5rem;
+  --baseFontSizeH1: 5rem;
   --baseFontSizeH2: 1.8rem;
   --baseFontSizeH3: 1.5rem;
   --custonFontFamily: "Yanone Kaffeesatz", sans-serif;
   --mainRed: rgb(220, 20, 60); /* crimson */
+  --lightPink: rgb(248, 210, 216);
+  --mainDarkBlue: rgba(27, 54, 77, 0.61);
+  --mainLightBlue: rgb(176, 234, 248);
+  --mainBorderBlue: rgba(25, 116, 219, 0.747);
+  --mainBorderBlueSolid: rgb(25, 116, 219);
+  --mainCardTheme: rgb(245, 235, 224);
 }
 
 * {
@@ -16,12 +22,12 @@ body {
   padding: 0;
   font-size: var(--baseFontSizep);
   font-family: var(--custonFontFamily);
-  width: 100%;
-  height: 100%;
 }
 
 canvas {
-  position: absolute;
-  z-index: -5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
   background-color: black;
 }

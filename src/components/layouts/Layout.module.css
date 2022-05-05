@@ -1,5 +1,6 @@
 main {
   justify-items: center;
+  justify-content: center;
   display: grid;
 }
 
@@ -82,10 +83,32 @@ Responsiveness
 @media only screen and (min-width: 768px) {
   main {
     padding: 9.3rem 2rem 2rem;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "dummyproductsLoader productformarea productcounterarea"
+      "productgridarea productgridarea productgridarea";
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    padding: 9.3rem 2rem 2rem;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
     grid-template-rows: auto auto;
     grid-template-areas:
       "dummyproductsLoader productformarea productformarea productcounterarea"
       "productgridarea productgridarea productgridarea productgridarea";
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  main {
+    padding: 9.3rem 2rem 2rem;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "dummyproductsLoader productformarea productformarea productformarea productformarea productcounterarea"
+      "productgridarea productgridarea productgridarea productgridarea productgridarea productgridarea";
   }
 }

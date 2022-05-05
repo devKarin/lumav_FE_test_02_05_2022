@@ -1,10 +1,11 @@
 .mainformwrapper {
-  color: rgb(189, 87, 102);
-  display: grid;
+  color: var(--mainRed);
   justify-content: center;
 }
 
-.mainformwrapper {
+.mainformwrapper h2 {
+  font-size: var(--baseFontSizeH2);
+  text-align: center;
 }
 
 .addproductform {
@@ -17,9 +18,10 @@
 }
 
 .formcontentwrapper label {
-  font-size: 1rem;
   display: block;
   margin-top: 1rem;
+  font-size: var(--baseFontSizep);
+  font-weight: bold;
 }
 
 .formcontentwrapper input {

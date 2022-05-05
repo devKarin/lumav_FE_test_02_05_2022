@@ -2,24 +2,29 @@
   padding: 0.2rem;
   outline: auto;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .submit {
-  background-color: greenyellow;
-  color: darkgreen;
+  background-color: var(--mainLightBlue);
+  color: var(--mainBorderBlue);
+  font-size: var(--baseFontSizep);
+  font-weight: bold;
 }
 
 .remove {
-  background-color: pink;
-  color: red;
+  background-color: var(--lightPink);
+  color: var(--mainRed);
 }
 
 .mark {
   background-color: white;
-  color: blue;
+  color: var(--mainBorderBlueSolid);
 }
 
 .usual {
-  background-color: lightblue;
-  color: blue;
+  background-color: var(--mainLightBlue);
+  color: var(--mainBorderBlue);
+  font-size: var(--baseFontSizep);
+  font-weight: bold;
 }
