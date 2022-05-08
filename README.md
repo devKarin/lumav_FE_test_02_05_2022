@@ -5,7 +5,9 @@ A test assignment for the company Lumav Commerce OÜ regarding frontend develope
 ## Assignment description summary (in English)
 
 Create a React app, which consists a form, a grid for products and a counter for products in shopping cart. <br/>
+
 Through the form the products can be added to the product grid. Form fields consist of a product image, a product name and a product price field. <br/>
+
 When submitted, the product with data given through form will be added into the grid. <br />
 
 One product consists of an image, a name and a price. Additionally, it has to have a "Add to cart" button and a button to remove the product from the grid.
@@ -13,7 +15,7 @@ Clicking the removal button, the product will be deleted from the grid. When add
 
 Do not use any framework for the design (eg Bootstrap, Material UI, etc.) - the design must be self-made.<br />
 
-[lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
+![lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
 
 ## Assignment description summary (in Estonian)
 
@@ -28,4 +30,4 @@ Gridist eemaldamise nupule vajutades kustutatakse vastav toode gridist. Toodet o
 
 Ära kasuta kujunduse jaoks eraldi frameworki (nt Bootstrap, Material UI jms) - kujundus peab olema ise tehtud.
 
-[lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
+![lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
