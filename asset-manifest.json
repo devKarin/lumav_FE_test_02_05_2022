@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lumav_FE_test_02_05_2022/static/css/main.a4d9f71f.css",
+    "main.js": "/lumav_FE_test_02_05_2022/static/js/main.2a9a4855.js",
+    "index.html": "/lumav_FE_test_02_05_2022/index.html",
+    "main.a4d9f71f.css.map": "/lumav_FE_test_02_05_2022/static/css/main.a4d9f71f.css.map",
+    "main.2a9a4855.js.map": "/lumav_FE_test_02_05_2022/static/js/main.2a9a4855.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4d9f71f.css",
+    "static/js/main.2a9a4855.js"
+  ]
+}
