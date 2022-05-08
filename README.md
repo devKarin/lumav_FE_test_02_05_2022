@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# lumav_FE_test_02_05_2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A test assignment for the company Lumav Commerce OÜ regarding frontend developer position in May 2022.
 
-## Available Scripts
+## Assignment description summary (in English)
 
-In the project directory, you can run:
+Create a React app, which consists a form, a grid for products and a counter for products in shopping cart. <br/>
+Through the form the products can be added to the product grid. Form fields consist of a product image, a product name and a product price field. <br/>
+When submitted, the product with data given through form will be added into the grid. <br />
 
-### `npm start`
+One product consists of an image, a name and a price. Additionally, it has to have a "Add to cart" button and a button to remove the product from the grid.
+Clicking the removal button, the product will be deleted from the grid. When added to cart, the product count in the cart must change accordingly.<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Do not use any framework for the design (eg Bootstrap, Material UI, etc.) - the design must be self-made.<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
 
-### `npm test`
+## Assignment description summary (in Estonian)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tee Reacti app, mis koosneb vormist, toodete gridist ja ostukorvis olevate toodete counterist. <br/>
 
-### `npm run build`
+Vormi kaudu saab lisada tooteid toodete gridi. Vormi väljades on toote pilt, nimi ja hind. <br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Vormi submittimise peale lisatakse vormis määratud andmetega toode toodete gridi. <br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Üks toode koosneb pildist, nimest ja hinnast, peale nende peab tootel olema “lisa ostukorvi” nupp ja gridist eemaldamise nupp.
+Gridist eemaldamise nupule vajutades kustutatakse vastav toode gridist. Toodet ostukorvi lisades peab muutuma ostukorvis olevate toodete arv vastavalt. <br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ära kasuta kujunduse jaoks eraldi frameworki (nt Bootstrap, Material UI jms) - kujundus peab olema ise tehtud.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view?usp=sharing)
