@@ -28,3 +28,11 @@
   font-size: var(--baseFontSizep);
   font-weight: bold;
 }
+
+.disabled {
+  background-color: var(--mainDarkBlue);
+  color: var(--mainLightBlue);
+  font-size: var(--baseFontSizep);
+  font-weight: bold;
+  cursor: not-allowed;
+}

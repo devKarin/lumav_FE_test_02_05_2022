@@ -12,6 +12,9 @@ export default function Button(props) {
         case 'mark':
             style = `${classes.mark}`;
             break;
+        case 'disabled':
+            style = `${classes.disabled}`;
+            break;
         default:
             style = `${classes.usual}`;
     }

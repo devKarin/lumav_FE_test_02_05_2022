@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import ShoppingCart from '../../store/shoppingcart';
 import ProductForm from '../products/ProductForm';
@@ -13,19 +13,23 @@ import classes from './Layout.module.css';
 
 export default function Layout() {
     const cartCTX = useContext(ShoppingCart);
+    const [disabled, setDisabled] = useState(false);
     let productList = cartCTX.itemsOnProductList;
 
     function loadDummiesHandler() {
-        products.forEach(product => {
-            product.id = Math.floor(Math.random() * 500001);
-            cartCTX.addToProductList(product)
-        });
+        if (!disabled) {
+            products.forEach(product => {
+                product.id = Math.floor(Math.random() * 500001);
+                cartCTX.addToProductList(product)
+            });
+            setDisabled(true);
+        } else return;
     }
 
     return (
         <main className={classes.mainlayout}>
             <div className={classes.dummyproductsLoader}>
-                <Button text="I'm too lazy, please load dummies for me" onClick={loadDummiesHandler} />
+                <Button buttonStyle={disabled ? 'disabled' : 'usual'} text={disabled ? 'Dummy products loaded' : "I'm too lazy, please load dummies for me"} onClick={loadDummiesHandler} />
             </div>
             <div className={classes.productformarea}>
                 <ProductForm />
