@@ -14,9 +14,9 @@ export default function ProductForm() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const newProductImageUrl = inputProductImageUrl.current.value;
-        const newProductName = inputProductName.current.value;
-        const newProductPrice = inputProductPrice.current.value;
+        const newProductImageUrl = inputProductImageUrl.current.value.toString();
+        const newProductName = inputProductName.current.value.toString();
+        const newProductPrice = inputProductPrice.current.value.toString();
         const product = {
             id: Math.floor(Math.random() * 500001),
             imageurl: newProductImageUrl,
@@ -44,7 +44,7 @@ export default function ProductForm() {
                         <label htmlFor='name'>Product name:</label>
                         <input id='name' name='name' type='text' required ref={inputProductName} />
                         <label htmlFor='price'>Product price:</label>
-                        <input id='price' name='price' type='number' required ref={inputProductPrice} />
+                        <input id='price' name='price' type='number' min='0' required ref={inputProductPrice} />
                     </div>
                     <Button buttonStyle='submit' text='Submit' />
                 </form>
