@@ -8,10 +8,7 @@ const ShoppingCart = createContext({
     removeFromProductList: (_productId) => { /* Just a comment */ },
     productIsOnList: (_productId) => { /* Just a comment */ },
     itemsInCart: [],
-    uniqueItemsInCart: [],
-    totalItemsInCart: 0,
     addToCart: (_itemToAdd) => { /* Just a comment */ },
-    addUniqueItemsToCart: (_itemToAdd) => { /* Just a comment */ },
     removeFromCart: (_itemId) => { /* Just a comment */ },
     removeOneFromCart: (_itemId) => { /* Just a comment */ },
     itemIsInCart: (_itemId) => { /* Just a comment */ },
@@ -19,15 +16,21 @@ const ShoppingCart = createContext({
 
 // Named export
 export function ShoppingCartProvider(props) {
-    const [uniqueCart, setUniqueCart] = useState([]);
     const [cart, setCart] = useState([]);
     const [list, setList] = useState([]);
 
     // Add products in the grid
     function addToProductListHandler(productToAdd) {
         setList((prevList) => {
+            const duplicate = prevList.find(item => item.id === productToAdd.id);
 
-            return prevList.concat(productToAdd);
+            if (duplicate) {
+
+                return prevList;
+            } else {
+
+                return prevList.concat(productToAdd);
+            }
         });
     }
 
@@ -48,37 +51,18 @@ export function ShoppingCartProvider(props) {
     // Add product to shoppingcart
     function addToCartHandler(itemToAdd) {
         itemToAdd.countincart = parseInt(itemToAdd.countincart) + 1;
-        setCart((prevInCart) => {
-            prevInCart.forEach((item) => {
 
-                if (item.id === itemToAdd.id) {
-                    item.countincart = parseInt(item.countincart) + 1;
-                }
-            });
+        setCart((prevCart) => {
+            const duplicate = prevCart.find(item => item.id === itemToAdd.id);
 
-            return prevInCart;
-        });
+            if (duplicate) {
+                duplicate.countincart = parseInt(duplicate.countincart) + 1;
 
-        setCart((prevOnCart) => {
-
-            return prevOnCart.concat(itemToAdd);
-        });
-
-        addUniqueItemsToCartHandler(itemToAdd);
-    }
-
-    // For tracking unique products in shoppingcart
-    function addUniqueItemsToCartHandler(itemToAdd) {
-        setUniqueCart((prevCart) => {
-            const indexOfDuplicate = prevCart.findIndex(item => item.id === itemToAdd.id);
-
-            if (indexOfDuplicate === -1) {
-
-                return prevCart.concat(itemToAdd);
+                return prevCart.filter(item => item.id !== duplicate.id).concat(duplicate);
 
             } else {
 
-                return prevCart;
+                return prevCart.concat(itemToAdd);
             }
         });
     }
@@ -86,63 +70,22 @@ export function ShoppingCartProvider(props) {
     // Remove product from shoppingcart (including duplicates)
     function removeFromCartHandler(itemId) {
 
-        const coreFunction = (prevCart) => {
+        setCart((prevCart) => {
 
-            return prevCart.filter(item => item.id !== itemId)
-        }
-
-        setCart(coreFunction);
-        setUniqueCart(coreFunction);
+            return prevCart.filter(item => item.id !== itemId);
+        });
     }
 
-    // Remove only one instace of the product from shoppingcart (excluding duplicates) i.e reduce product amount
+    // Reduce product amount in the shoppingcart or remove product from cart, if the amount is below 1
     function removeOneFromCartHandler(itemId) {
 
         setCart((prevCart) => {
-            prevCart.find((item) => {
+            const duplicate = prevCart.find(item => item.id === itemId);
 
-                if (item.id === itemId) {
-                    const parsedcount = parseInt(item.countincart)
-                    item.countincart = parsedcount - 1;
-                }
+            if (duplicate && duplicate.countincart > 0) {
+                duplicate.countincart = parseInt(duplicate.countincart) - 1;
 
-                return prevCart;
-            });
-
-            const indexOfDuplicate = prevCart.findIndex(item => item.id === itemId);
-
-            if (indexOfDuplicate > -1) {
-
-                return prevCart.filter(item => prevCart.indexOf(item) !== indexOfDuplicate);
-
-            } else {
-
-                return prevCart;
-            }
-        });
-
-        removeOneFromUniqueCartHandler(itemId);
-
-    }
-
-    // Reduce product amount in the list of unique products in the shoppingcart
-    function removeOneFromUniqueCartHandler(itemId) {
-
-        setUniqueCart((prevCart) => {
-            const itemToReduce = prevCart.find(item => item.id === itemId);
-
-            if (itemToReduce && (parseInt(itemToReduce.countincart) > 1)) {
-                itemToReduce.countincart = parseInt(itemToReduce.countincart) - 1;
-
-                return prevCart;
-
-            } else if (itemToReduce && (parseInt(itemToReduce.countincart) === 1)) {
-
-                return prevCart.filter(item => item.id !== itemId);
-
-            } else {
-
-                return prevCart;
+                return prevCart.filter(item => item.countincart > 0)
             }
         });
     }
@@ -161,10 +104,7 @@ export function ShoppingCartProvider(props) {
         removeFromProductList: removeFromProductListHandler,
         productIsOnList: productIsOnListHandler,
         itemsInCart: cart,
-        uniqueItemsInCart: uniqueCart,
-        totalItemsInCart: cart.length,
         addToCart: addToCartHandler,
-        addUniqueItemsToCart: addUniqueItemsToCartHandler,
         removeFromCart: removeFromCartHandler,
         removeOneFromCart: removeOneFromCartHandler,
         itemIsInCart: itemIsInCartHandler,
