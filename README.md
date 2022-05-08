@@ -15,7 +15,7 @@ Clicking the removal button, the product will be deleted from the grid. When add
 
 Do not use any framework for the design (eg Bootstrap, Material UI, etc.) - the design must be self-made.<br />
 
-![lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view)
+![lumav_FE_test_02_05_2022_picture_public](https://github.com/devKarin/lumav_FE_test_02_05_2022/blob/main/lumav_FE_test_02_05_2022_picture_public.png)
 
 ## Assignment description summary (in Estonian)
 
@@ -30,4 +30,4 @@ Gridist eemaldamise nupule vajutades kustutatakse vastav toode gridist. Toodet o
 
 Ära kasuta kujunduse jaoks eraldi frameworki (nt Bootstrap, Material UI jms) - kujundus peab olema ise tehtud.
 
-![lumav_FE_test_02_05_2022_picture_public](https://drive.google.com/file/d/1Ti7I05PCw2UrbH_xyvkjaIGolQaVEFxe/view)
+![lumav_FE_test_02_05_2022_picture_public](https://github.com/devKarin/lumav_FE_test_02_05_2022/blob/main/lumav_FE_test_02_05_2022_picture_public.png)
