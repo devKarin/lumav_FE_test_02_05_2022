@@ -4,6 +4,8 @@ Initially the application was a test assignment for the company Lumav Commerce O
 
 It has been developed further and migrated from a plain React.js application into a Next.js application.
 
+In the future this project will be integrated into a larger project of mine and it may not be available as a standalone application.
+
 ## Assignment description summary (in English)
 
 Create a React app, which consists of a form, a grid for products, and a counter for products in the shopping cart. <br/>
