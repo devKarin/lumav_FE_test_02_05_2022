@@ -14,7 +14,7 @@ export const metadata = {
     shortcut: '/android-chrome192x192.png',
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json'
+  manifest: '/lumav_FE_test_02_05_2022/manifest.json'
 
 }
 
