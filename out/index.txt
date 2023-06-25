@@ -1,7 +1,7 @@
 1:HL["/lumav_FE_test_02_05_2022/_next/static/css/2362479c333593d2.css",{"as":"style"}]
-0:["X6GaCQrHiiVLAXQBkLeAr",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/lumav_FE_test_02_05_2022/_next/static/css/2362479c333593d2.css","precedence":"next"}]],["$L3",null]]]]]
+0:["PSV8teajOC5lR2XeAy7F2",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/lumav_FE_test_02_05_2022/_next/static/css/2362479c333593d2.css","precedence":"next"}]],["$L3",null]]]]]
 4:HL["/lumav_FE_test_02_05_2022/_next/static/css/264213a894f23504.css",{"as":"style"}]
-5:I{"id":"8681","chunks":["931:static/chunks/app/page-d11aa6879999078a.js"],"name":"ShoppingCartProvider","async":false}
+5:I{"id":"8681","chunks":["185:static/chunks/app/layout-a00bc1005602d040.js"],"name":"ShoppingCartProvider","async":false}
 6:I{"id":"3211","chunks":["272:static/chunks/webpack-7bbb4f48fd83fa5d.js","253:static/chunks/bce60fc1-79d060b4f8094721.js","769:static/chunks/769-a3d5ed0b04841422.js"],"name":"","async":false}
 7:I{"id":"5767","chunks":["272:static/chunks/webpack-7bbb4f48fd83fa5d.js","253:static/chunks/bce60fc1-79d060b4f8094721.js","769:static/chunks/769-a3d5ed0b04841422.js"],"name":"","async":false}
 8:I{"id":"5191","chunks":["931:static/chunks/app/page-d11aa6879999078a.js"],"name":"","async":false}
