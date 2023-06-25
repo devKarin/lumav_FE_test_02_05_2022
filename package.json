@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "git checkout gh-pages && git pull && git add . && git commit -m'' && git push && git checkout main && next build && type nul > out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "lint": "next lint"
   },
   "dependencies": {
     "eslint": "8.43.0",
