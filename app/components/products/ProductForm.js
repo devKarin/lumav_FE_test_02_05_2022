@@ -1,6 +1,6 @@
 import { useRef, useContext } from 'react';
 
-import ShoppingCart from '../../store/shoppingcart';
+import ShoppingCart from '@/lib/shoppingcart';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 

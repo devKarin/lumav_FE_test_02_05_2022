@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import ShoppingCart from '../../store/shoppingcart';
+import ShoppingCart from '@/lib/shoppingcart';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 

@@ -1,23 +1,25 @@
 # lumav_FE_test_02_05_2022
 
-A test assignment for the company Lumav Commerce OÜ regarding frontend developer position in May 2022.
+Initially the application was a test assignment for the company Lumav Commerce OÜ regarding a frontend developer position in May 2022.
+
+It has been developed further and migrated from a plain React.js application into a Next.js application.
 
 ## Assignment description summary (in English)
 
-Create a React app, which consists a form, a grid for products and a counter for products in shopping cart. <br/>
+Create a React app, which consists of a form, a grid for products, and a counter for products in the shopping cart. <br/>
 
-Through the form the products can be added to the product grid. Form fields consist of a product image, a product name and a product price field. <br/>
+Through the form the products can be added to the product grid. Form fields consist of a product image, a product name, and a product price field. <br/>
 
 When submitted, the product with data given through form will be added into the grid. <br />
 
-One product consists of an image, a name and a price. Additionally, it has to have a "Add to cart" button and a button to remove the product from the grid.
-Clicking the removal button, the product will be deleted from the grid. When added to cart, the product count in the cart must change accordingly.<br/>
+One product consists of an image, a name, and a price. Additionally, it has to have an "Add to cart" button and a button to remove the product from the grid.
+Clicking the removal button, the product will be deleted from the grid. When added to the cart, the product count in the cart must change accordingly.<br/>
 
-Do not use any framework for the design (eg Bootstrap, Material UI, etc.) - the design must be self-made.<br />
+Do not use any frameworks for the design (e.g., Bootstrap, Material UI, etc.) - the design must be self-made.<br />
 
 ![assignment_snap](https://github.com/devKarin/lumav_FE_test_02_05_2022/blob/main/assignment_snap.png)
 
-## Assignment description summary (in Estonian)
+## Assignment description summary (original, in Estonian)
 
 Tee Reacti app, mis koosneb vormist, toodete gridist ja ostukorvis olevate toodete counterist. <br/>
 

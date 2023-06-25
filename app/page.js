@@ -1,12 +1,10 @@
-import React from 'react';
-import './App.css';
+import './page.module.css';
 
 import Canvas from './components/ui/Canvas';
 import Layout from './components/layouts/Layout';
 import Header from './components/layouts/Header';
 
-function App() {
-
+export default function Home() {
   return (
     <div className='app'>
       <Canvas />
@@ -17,7 +15,5 @@ function App() {
         <Layout />
       </div>
     </div>
-  );
+  )
 }
-
-export default App;

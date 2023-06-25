@@ -25,6 +25,6 @@
   font-size: var(--baseFontSizep);
 }
 
-span {
+span.counterspan {
   color: black;
 }

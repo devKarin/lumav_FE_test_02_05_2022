@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useEffect } from 'react';
 
 const Canvas = props => {
@@ -150,7 +151,7 @@ const Canvas = props => {
             window.removeEventListener('resize', resize);
             window.removeEventListener('mousemove', mousemove);
         }
-    }, []);
+    }, [MOUSE, allStars, initialize]);
 
     return <canvas ref={canvasRef} {...props} />
 }

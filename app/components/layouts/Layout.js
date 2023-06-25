@@ -1,13 +1,14 @@
+"use client";
 import { useContext, useState } from 'react';
 
-import ShoppingCart from '../../store/shoppingcart';
+import ShoppingCart from '@/lib/shoppingcart';
 import ProductForm from '../products/ProductForm';
 import ProductCounter from '../products/ProductCounter';
 import ProductGrid from '../products/ProductGrid';
 import Button from '../ui/Button';
 
 // Dummy list for products
-import { products } from '../../assets/products';
+import { products } from '../../../public/assets/products';
 
 import classes from './Layout.module.css';
 
