@@ -10,9 +10,9 @@ export const metadata = {
   creator: 'devKarin',
   themeColor: 'rgb(176, 234, 248)',
   icons: {
-    icon: '/android-chrome-512x512.png',
-    shortcut: '/android-chrome192x192.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/lumav_FE_test_02_05_2022/android-chrome-512x512.png',
+    shortcut: '/lumav_FE_test_02_05_2022/android-chrome192x192.png',
+    apple: '/lumav_FE_test_02_05_2022/apple-touch-icon.png',
   },
   manifest: '/lumav_FE_test_02_05_2022/manifest.json'
 
