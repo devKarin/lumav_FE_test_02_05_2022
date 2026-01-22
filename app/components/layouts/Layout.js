@@ -16,6 +16,11 @@ export default function Layout() {
     const cartCTX = useContext(ShoppingCart);
     const [disabled, setDisabled] = useState(false);
     let productList = cartCTX.itemsOnProductList;
+    const productCount = cartCTX.totalItemsOnProductList;
+
+    if (!productCount && disabled) {
+        setDisabled(false);
+    }
 
     function loadDummiesHandler() {
         if (!disabled) {
