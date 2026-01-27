@@ -4,27 +4,27 @@
   "description": "Simple shop frontend application",
   "icons": [
     {
-      "src": "/lumav_FE_test_02_05_2022/favicon.ico",
+      "src": "/favicon.ico",
       "sizes": "32x32",
       "type": "image/x-icon"
     },
     {
-      "src": "/lumav_FE_test_02_05_2022/favicon-32x32.png",
+      "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/lumav_FE_test_02_05_2022/favicon-16x16.png",
+      "src": "/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/lumav_FE_test_02_05_2022/logo192.png",
+      "src": "/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/lumav_FE_test_02_05_2022/logo512.png",
+      "src": "/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
