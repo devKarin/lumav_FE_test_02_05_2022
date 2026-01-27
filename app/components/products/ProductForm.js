@@ -41,8 +41,8 @@ export default function ProductForm() {
                     <div className={classes.formcontentwrapper}>
                         <label htmlFor='imageurl'>Product image url:</label>
                         <input id='imageurl' name='imageurl' type='url' required ref={inputProductImageUrl} />
-                        <label htmlFor='name'>Product name:</label>
-                        <input id='name' name='name' type='text' required ref={inputProductName} />
+                        <label htmlFor='productname'>Product name:</label>
+                        <input id='productname' name='productname' type='text' required ref={inputProductName} />
                         <label htmlFor='price'>Product price:</label>
                         <input id='price' name='price' type='number' min='0' required ref={inputProductPrice} />
                     </div>
