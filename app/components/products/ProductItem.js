@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useContext } from 'react';
 
 import ShoppingCart from '@/lib/shoppingcart';
@@ -37,7 +38,7 @@ export default function ProductItem(props) {
                     <Button buttonStyle='remove' text='X' onClick={removeFromGridHandler} />
                 </div>
                 <div className={classes.productItemContent}>
-                    <img src={props.imageurl} alt={`Product: ${props.name}`} />
+                    <Image src={props.imageurl} alt={`Product: ${props.name}`} unoptimized={true} width={250} height={250} crossOrigin="anonymous" />
                     <p className={classes.labeltext}>Product: </p>
                     <p className={classes.productInfo}>{props.name}</p>
                     <p className={classes.labeltext}>Price: </p>
